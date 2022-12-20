@@ -1,0 +1,8 @@
+/node_modules/
+/public/build/
+__tests__/e2e/node_modules/
+__tests__/e2e/output/
+__tests__/e2e/package-lock.json
+
+package-lock.json
+.DS_Store

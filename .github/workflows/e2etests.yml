@@ -1,0 +1,20 @@
+name: Run Tests
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js 14
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+      - run: npm i
+      - run: cd ./__tests__/e2e
+      - run: npm i
+      - run: cd .. && cd ..
+      - run: npm ci
