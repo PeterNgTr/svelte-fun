@@ -19,7 +19,8 @@ export const config: CodeceptJS.MainConfig = {
       browser: 'chromium'
     },
     PixelmatchHelper: {
-      require: "codeceptjs-pixelmatchhelper"
+      require: "codeceptjs-pixelmatchhelper",
+      tolerance: 2.5
     }
   },
   include: {
