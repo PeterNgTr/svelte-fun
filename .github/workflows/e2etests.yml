@@ -17,4 +17,4 @@ jobs:
       - run: cd ./__tests__/e2e
       - run: npm i
       - run: cd .. && cd ..
-      - run: npm ci
+      - run: npm run ci

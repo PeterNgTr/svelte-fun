@@ -7,6 +7,7 @@ This project demonstrates how to drive your E2E tests with CodeceptJS - Playwrig
 * Tests are written in TS
 * CI/CD with Github Actions
 * Page Object Model is applied
+* Visual Testing using https://github.com/stracker-phil/codeceptjs-pixelmatchhelper
 
 ## How to use
 
