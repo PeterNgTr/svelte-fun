@@ -14,7 +14,4 @@ jobs:
         with:
           node-version: 14
       - run: npm i
-      - run: cd ./__tests__/e2e
-      - run: npm i
-      - run: cd .. && cd ..
       - run: npm run ci
