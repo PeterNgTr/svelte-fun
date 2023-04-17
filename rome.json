@@ -1,0 +1,23 @@
+{
+	"$schema": "./node_modules/rome/configuration_schema.json",
+	"organizeImports": {
+		"enabled": false
+	},
+	"javascript": {
+		"formatter": {
+			"quoteStyle": "single",
+			"semicolons": "asNeeded"
+		}
+	},
+	"formatter": {
+		"ignore": ["__tests__/e2e/step*", "public", "scripts", "rollup.config.js"],
+		"indentStyle": "tab"
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true
+		},
+		"ignore": ["__tests__/e2e/step*", "public", "scripts", "rollup.config.js"]
+	}
+}

@@ -1,20 +1,25 @@
-Feature('Bookstore');
+import Injector from './Injector'
+const { I } = inject()
 
-Before(({ I }) => {
-    I.amOnPage('/')
+const { bookstorePage } = Injector.getPageObjects()
+
+Feature('Bookstore')
+
+Before(() => {
+	I.amOnPage('/')
 })
 
-Scenario('Bookstore is showing',  async ({ I }) => {
-    await I.checkVisualDifferences("bookstore.png");
-});
+Scenario('Bookstore is showing', async () => {
+	await I.checkVisualDifferences('bookstore.png')
+})
 
-Scenario('Adding new book',  async ({ I, bookstorePage }) => {
-    bookstorePage.addNewBook();
-    I.see('This is a new book');
-});
+Scenario('Adding new book', async () => {
+	bookstorePage.addNewBook()
+	I.see('This is a new book')
+})
 
-Scenario('Add a book to cart',  async ({ I, bookstorePage }) => {
-    bookstorePage.addNewBook();
-    bookstorePage.buyBook();
-    I.see('Total Price: 120');
-});
+Scenario('Add a book to cart', async () => {
+	bookstorePage.addNewBook()
+	bookstorePage.buyBook()
+	I.see('Total Price: 120')
+})
