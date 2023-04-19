@@ -1,20 +1,18 @@
-import Bookstore from './pages/Bookstore'
+import Bookstore from './pages/Bookstore';
 
 class Injector {
-	private static isInitialized: boolean
-	private static bookstorePage: Bookstore
+	private static isInitialized: boolean;
+	private static bookstorePage: Bookstore;
 
-	constructor() {
-		Injector.isInitialized = true
-	}
+	private constructor() {}
 
-	public static getPageObjects() {
+	public static getPageObjects(){
 		if (!this.isInitialized) {
 			this.bookstorePage = new Bookstore()
-
-			return {
-				bookstorePage: this.bookstorePage,
-			}
+			this.isInitialized = true
+		}
+		return {
+			bookstorePage: this.bookstorePage
 		}
 	}
 }
